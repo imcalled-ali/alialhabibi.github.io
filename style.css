@@ -1,0 +1,38 @@
+html{
+
+}
+
+body{
+	background-color: antiquewhite;
+}
+
+.fade {
+	opacity:0;
+}
+
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: orange;
+	letter-spacing: 2px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2px;
+	height: 20px;
+	background-color: orange;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: orange; 
+	}
+}
+
