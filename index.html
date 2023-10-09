@@ -4,78 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         tailwind.config = {
           theme: {
             extend: {
-              colors: {
-                primaty: '#da373d',
-                secondary: '',
-                extra: '',
-              }
+            colors: {
+              bgcl: '#fcfbf7',
+              primary: '#ECE9E1',
+              secondary: '#3D3D3D',
+              extra: '#d6d3cb',
+            }
             }
           }
         }
 
         $(document).ready(function() {
           $('.fade').each( function(i){
-          $(this).animate({'opacity':'1','margin-left':'0px'},800);
+          $(this).animate({'opacity':'1'},800);
         });
-
-        (function( d ) {
-        'use strict';
-
-        var c = 0,i = 0, st,
-        text = ['Lorem ipsum dolor amet',
-                'Vivamus eget.',
-                'Vivamus felis, egestas',
-                'Integer imperdiet.'
-                ],
-        cont = d.getElementById( 'content' );
-
-        function typing( c ) {	  
-            if ( i === text.length) {
-                return;
-              } 
-            if ( c < text[ i ].length && i < text.length ) {
-                cont.textContent += text[ i ].charAt( c );
-                c ++;
-              st = setTimeout( function(){ typing( c ) },200 ); 
-              }
-            else {
-                clearTimeout( st );
-                cont.textContent = ''; 
-                c = 0;
-                i ++ ; 
-                setTimeout( function(){ typing( c ) }, 250 );
-              }
-          }
-
-        typing( c );
-
-      }( document ));
       });
+        
       </script>
-    <title>Document</title>
+    <title>Resume | Ali Alhabibi | Home</title>
 </head>
 
-<body class="box-border">
+<body class="box-border bg-bgcl">
   
   <!-- Navigation -->
   <aside class="relative fade">
     <div class="md:fixed md:h-screen px-2 py-1 md:py-8 rounded-xl flex md:flex-col justify-center">
       <nav class="flex items-center flex-row space-x-2 md:space-x-0 md:flex-col md:space-y-2">
-        <a class="bg-gray-800 text-white p-4 inline-flex justify-center rounded-md " href="./index.html">
+        <a class="bg-secondary text-white p-4 inline-flex justify-center rounded-md " href="./index.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
         </a>
         <!-- Active: bg-gray-800 text-white, Not active: text-white/50 -->
-        <a class="bg-gray-400 text-white p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="./projects.html">
+        <a class="bg-extra text-white p-4 inline-flex justify-center rounded-md hover:bg-secondary hover:text-white smooth-hover" href="./projects.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path></svg>
         </a>
-        <a class="bg-gray-400 text-white p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="./contact.html">
+        <a class="bg-extra text-white p-4 inline-flex justify-center rounded-md hover:bg-secondary hover:text-white smooth-hover" href="./contact.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
         </a>
       </nav>
@@ -84,10 +52,10 @@
 
   <!-- Main-->
   <div class="py-8 px-6 2xl:px-72 md:px-24">
-    <header id="hd" class="fade item-center mb-24 mx-auto p-9 xl:px-20 border border-yellow-500 rounded-lg">
+    <header id="hd" class="fade item-center mb-24 mx-auto p-9 xl:px-20 border border-secondary rounded-lg">
       <div class="">
-        <h1 class="font-bold text-4xl p-2 text-clifford">Ali Alhabibi</h1>
-        I do <span class="font-bold">Back-end development</span>
+        <h1 class="font-bold text-4xl p-2 text-clifford text-secondary">Ali Alhabibi</h1>
+        I Do <span class="font-bold">Back-end development</span>
         <p class="p-3 text-lg ">Being enthusiastic about Web development, I started learning HTML, CSS & JS in 2015. In the last 3 years, I've been focusing on Back-end development with PHP and LAMP stack. Interested in teaching, mentoring, discovering best solutions and searching for new experiences.</p>
       </div>
       <div class="">
@@ -98,10 +66,10 @@
           <li><a href="https://github.com/AliAlhabibi">
             <svg class="h-8 w-8 p-1" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></li>
           </a></li>
-          <li><a href="#">
+          <li><a href="https://instagram.com">
             <svg class="h-8 w-8 p-1" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></li>
           </a></li>
-          <li><a href="mailto:">
+          <li><a href="mailto:https://mail.com">
               <svg class="h-8 w-8 p-1" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M23,20 L23,6 L12,15 L1,6 L1,20 L23,20 Z M12,12 L22,4 L2,4 L12,12 Z"></path></svg></li>
           </a></li>
         </ul>
@@ -110,7 +78,7 @@
     <main class="mx-auto">
 
         <section id="tech" class="mb-16 fade">
-          <h2 class="text-2xl mb-3 font-bold">Technologies I Use</h2>
+          <h2 class="text-3xl mb-3 text-secondary">Technologies I Use</h2>
           <div class="p-4 flex flex-wrap gap-4 justify-center">
             <div class=" rounded-full px-3 align-center opacity-100 hover:opacity-70 ">
               <svg class="w-20 h-20" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PHP</title><path d="M2.15 16.78h1.57a.14.14 0 0 0 .14-.12l.35-1.82h1.22a4.88 4.88 0 0 0 1.51-.2A2.79 2.79 0 0 0 8 14a3.18 3.18 0 0 0 .67-.85 3.43 3.43 0 0 0 .36-1 2.43 2.43 0 0 0-.41-2.16 2.64 2.64 0 0 0-2.09-.78h-3a.16.16 0 0 0-.15.13L2 16.6a.19.19 0 0 0 0 .13.17.17 0 0 0 .15.05zM5 10.62h1a1.45 1.45 0 0 1 1.08.29c.17.18.2.52.11 1a1.81 1.81 0 0 1-.57 1.12 2.17 2.17 0 0 1-1.33.33h-.8zm9.8-.95a2.7 2.7 0 0 0-1.88-.51h-1.19l.33-1.76a.15.15 0 0 0 0-.13.16.16 0 0 0-.11 0h-1.57a.14.14 0 0 0-.14.12l-1.38 7.27a.13.13 0 0 0 0 .12.13.13 0 0 0 .11.06h1.54a.14.14 0 0 0 .14-.13l.77-4.07h1.11c.45 0 .61.1.66.16a.81.81 0 0 1 0 .62l-.61 3.24a.13.13 0 0 0 0 .12.14.14 0 0 0 .11.06h1.56a.16.16 0 0 0 .15-.13l.64-3.4a1.7 1.7 0 0 0-.24-1.64zm4.52-.51h-3.13a.14.14 0 0 0-.15.13l-1.46 7.31a.16.16 0 0 0 0 .13.14.14 0 0 0 .11.05h1.63a.14.14 0 0 0 .15-.12l.37-1.82h1.27a5.28 5.28 0 0 0 1.56-.2 3 3 0 0 0 1.18-.64 3.31 3.31 0 0 0 .7-.85 3.45 3.45 0 0 0 .37-1 2.38 2.38 0 0 0-.42-2.16 2.81 2.81 0 0 0-2.18-.83zm.62 2.77a1.83 1.83 0 0 1-.6 1.12 2.28 2.28 0 0 1-1.37.33h-.8l.54-2.76h1a1.6 1.6 0 0 1 1.13.29c.16.18.16.52.1 1.02z"></path></svg>
@@ -149,82 +117,5 @@
     <footer></footer>
   </div>
 
-
-
-<script>
-    var _CONTENT = [ 
-      "Twinkle, twinkle, little star", 
-      "How I wonder what you are", 
-      "Up above the world so high", 
-      "Like a diamond in the sky"
-    ];
-
-    // Current sentence being processed
-    var _PART = 0;
-
-    // Character number of the current sentence being processed 
-    var _PART_INDEX = 0;
-
-    // Holds the handle returned from setInterval
-    var _INTERVAL_VAL;
-
-    // Element that holds the text
-    var _ELEMENT = document.querySelector("#text");
-
-    // Cursor element 
-    var _CURSOR = document.querySelector("#cursor");
-
-    // Implements typing effect
-    function Type() { 
-      // Get substring with 1 characater added
-      var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-      _ELEMENT.innerHTML = text;
-      _PART_INDEX++;
-
-      // If full sentence has been displayed then start to delete the sentence after some time
-      if(text === _CONTENT[_PART]) {
-        // Hide the cursor
-        _CURSOR.style.display = 'none';
-
-        clearInterval(_INTERVAL_VAL);
-        setTimeout(function() {
-          _INTERVAL_VAL = setInterval(Delete, 50);
-        }, 1000);
-      }
-    }
-
-    // Implements deleting effect
-    function Delete() {
-      // Get substring with 1 characater deleted
-      var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-      _ELEMENT.innerHTML = text;
-      _PART_INDEX--;
-
-      // If sentence has been deleted then start to display the next sentence
-      if(text === '') {
-        clearInterval(_INTERVAL_VAL);
-
-        // If current sentence was last then display the first one, else move to the next
-        if(_PART == (_CONTENT.length - 1))
-          _PART = 0;
-        else
-          _PART++;
-        
-        _PART_INDEX = 0;
-
-        // Start to display the next sentence after some time
-        setTimeout(function() {
-          _CURSOR.style.display = 'inline-block';
-          _INTERVAL_VAL = setInterval(Type, 100);
-        }, 200);
-      }
-    }
-
-    // Start the typing effect on load
-    _INTERVAL_VAL = setInterval(Type, 100);
-
-
-
-  </script>
 </body>
 </html>

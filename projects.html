@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
@@ -12,9 +11,10 @@
           theme: {
             extend: {
               colors: {
-                primaty: '#da373d',
-                secondary: '',
-                extra: '',
+                bgcl: '#fcfbf7',
+                primary: '#ECE9E1',
+                secondary: '#3D3D3D',
+                extra: '#d6d3cb',
               }
             }
           }
@@ -25,58 +25,25 @@
           $('.fade').each( function(i){
           $(this).animate({'opacity':'1'},800);
         });
-
-        (function( d ) {
-        'use strict';
-
-        var c = 0,i = 0, st,
-        text = ['Lorem ipsum dolor amet',
-                'Vivamus eget.',
-                'Vivamus felis, egestas',
-                'Integer imperdiet.'
-                ],
-        cont = d.getElementById( 'content' );
-
-        function typing( c ) {	  
-            if ( i === text.length) {
-                return;
-              } 
-            if ( c < text[ i ].length && i < text.length ) {
-                cont.textContent += text[ i ].charAt( c );
-                c ++;
-              st = setTimeout( function(){ typing( c ) },200 ); 
-              }
-            else {
-                clearTimeout( st );
-                cont.textContent = ''; 
-                c = 0;
-                i ++ ; 
-                setTimeout( function(){ typing( c ) }, 250 );
-              }
-          }
-
-        typing( c );
-
-      }( document ));
       });
 
       </script>
-    <title>Document</title>
+    <title>Resume | Ali Alhabibi | Projects</title>
 </head>
-<body class="box-border">
+<body class="box-border bg-bgcl">
   
   <!-- Navigation -->
   <aside class="relative fade">
     <div class="md:fixed md:h-screen  px-2 py-1 md:py-8 rounded-xl flex md:flex-col justify-center">
       <nav class="flex items-center flex-row space-x-2 md:space-x-0 md:flex-col md:space-y-2">
-        <a class=" bg-gray-400 text-white p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="./index.html">
+        <a class=" bg-extra text-white p-4 inline-flex justify-center rounded-md hover:bg-secondary hover:text-white smooth-hover" href="./index.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
         </a>
-        <!-- Active: bg-gray-800 text-white, Not active: text-white/50 -->
-        <a class="bg-gray-800 text-white p-4 inline-flex justify-center rounded-md " href="./projects.html">
+        <!-- Active: bg-secondary text-white -->
+        <a class="bg-secondary text-white p-4 inline-flex justify-center rounded-md " href="./projects.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path></svg>
         </a>
-        <a class="bg-gray-400 text-white p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="./contact.html">
+        <a class="bg-extra text-white p-4 inline-flex justify-center rounded-md hover:bg-secondary hover:text-white smooth-hover" href="./contact.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
         </a>
       </nav>
@@ -88,7 +55,7 @@
 
 
     <div class="max-w-xl mx-auto fade">
-      <h1 class="text-3xl py-16 font-bold text-center">Projects</h1>
+      <h1 class="text-4xl py-16 text-center text-secondary">Projects</h1>
       <div class="flow-root">
         <ul class="-mb-8">
          
@@ -98,25 +65,21 @@
               <div class="relative flex items-start space-x-3">
                 <div>
                   <div class="relative px-1">
-                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-white flex items-center justify-center">
+                    <div class="h-8 w-8 bg-secondary rounded-full ring-8 ring-white flex items-center justify-center">
                       <svg class="w-5 h-5 text-white" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path></svg>
                     </div>
                   </div>
                 </div>
                 <div class="min-w-0 flex-1 py-0">
-                  <div class="text-md text-gray-500">
+                  <div class="text-md text-extra">
                     <div>
-                      <a href="#" class="font-bold text-xl text-gray-900 mr-2">Task Manager</a>
-    
-                      <div href="#" class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
-                        <div class="absolute flex-shrink-0 flex items-center justify-center">
-                          <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        </div>
-                        <div class="ml-3.5 font-medium text-gray-900">PHP</div>
+                      <a href="#" class="font-bold text-xl text-secondary mr-2">Task Manager</a>
+                      <div href="#" class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-extra px-3 py-0.5 text-sm">
+                        <div class="font-medium text-gray-900">PHP</div>
                       </div>
                     </div>
                   </div>
-                  <div class="mt-2 text-gray-700">
+                  <div class="mt-2 text-secondary">
                     <ul >
                       <li class="py-1">
                         <svg class=" inline-block" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
