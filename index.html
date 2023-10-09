@@ -6,27 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-            colors: {
-              bgcl: '#fcfbf7',
-              primary: '#ECE9E1',
-              secondary: '#3D3D3D',
-              extra: '#d6d3cb',
-            }
-            }
-          }
-        }
+    <script src="./script.js" ></script>
 
-        $(document).ready(function() {
-          $('.fade').each( function(i){
-          $(this).animate({'opacity':'1'},800);
-        });
-      });
-        
-      </script>
     <title>Resume | Ali Alhabibi | Home</title>
 </head>
 
@@ -39,7 +20,7 @@
         <a class="bg-secondary text-white p-4 inline-flex justify-center rounded-md " href="./index.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
         </a>
-        <!-- Active: bg-gray-800 text-white, Not active: text-white/50 -->
+        <!-- Active: bg-secondary text-white-->
         <a class="bg-extra text-white p-4 inline-flex justify-center rounded-md hover:bg-secondary hover:text-white smooth-hover" href="./projects.html">
           <svg class="h-5 w-5 sm:h-6 sm:w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path></svg>
         </a>
